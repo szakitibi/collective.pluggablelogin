@@ -4,7 +4,8 @@ Changelog
 1.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Python 3, Plone 5.2
+  [szakitibi]
 
 
 1.2.1 (2015-05-20)

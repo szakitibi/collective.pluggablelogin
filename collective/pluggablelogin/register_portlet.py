@@ -1,6 +1,6 @@
 from plone.portlets.interfaces import IPortletDataProvider
-from zope.interface import implements
-from zope.formlib.interfaces import IForm
+from zope.interface import implementer
+from zope.dottedname.resolve import resolve
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 
@@ -13,8 +13,8 @@ class IRegisterPortlet(IPortletDataProvider):
     """
 
 
+@implementer(IRegisterPortlet)
 class Assignment(base.Assignment):
-    implements(IRegisterPortlet)
 
     title = _(u'label_register', default=u'Register')
 
@@ -48,7 +48,11 @@ class Renderer(base.Renderer):
 
     @property
     def is_formlib(self):
-        return IForm.providedBy(self._form)
+        try:
+            IForm = resolve("zope.formlib.interfaces.IForm")
+            return IForm.providedBy(self._form)
+        except Exception:
+            return False
 
     render = ViewPageTemplateFile('register_portlet.pt')
 

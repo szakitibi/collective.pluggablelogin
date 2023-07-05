@@ -47,6 +47,14 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <gs:registerProfile
+    name="uninstall"
+    title="Pluggable Login Page (uninstall)"
+    directory="profiles/uninstall"
+    description="A login form driven by a portlet manager"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

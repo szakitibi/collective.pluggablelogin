@@ -1,6 +1,6 @@
-import unittest2 as unittest
+import unittest
 import transaction
-from plone.testing.z2 import Browser
+from plone.testing.zope import Browser
 from collective.pluggablelogin.testing import FUNCTIONAL_TESTING
 
 
@@ -11,7 +11,7 @@ class TestLogin(unittest.TestCase):
     def setUp(self):
         # turn on registration
         portal = self.layer['portal']
-        from plone.app.controlpanel.security import ISecuritySchema
+        from Products.CMFPlone.interfaces.controlpanel import ISecuritySchema
         ISecuritySchema(portal).enable_self_reg = True
         portal.validate_email = False
         transaction.commit()

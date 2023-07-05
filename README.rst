@@ -3,7 +3,7 @@
 
 The product is broken! It runs on Python 3.8, but it got obsolete with Plone 5.2! It might work with Plone 5.1.
 
-The skin based login has been removed and got replaced by a browser page based login - see `Products.CMFPlone commit 76d03441 <https://github.com/plone/Products.CMFPlone/commit/76d0344187c9d9c039086dad2ee375489ba81915#diff-3c31a803000849eed0e811268665c75c12ba307957800f2242bff775765998de>`_. ``portal_skins/plone_login`` is now gone, see `PLIP #2092 <https://github.com/plone/Products.CMFPlone/issues/2092>`_. The missing ``portal_skins/plone_login`` of course mean the ```login_form_validate`` <https://github.com/plone/Products.CMFPlone/blob/8635459222bbf3bc5401edcc8ba19d8400eada0d/Products/CMFPlone/skins/plone_login/login_form_validate.vpy>`_ is gone too, as a reasult the login portlet produces an error.
+The skin based login has been removed and got replaced by a browser page based login - see `Products.CMFPlone commit 76d03441 <https://github.com/plone/Products.CMFPlone/commit/76d0344187c9d9c039086dad2ee375489ba81915#diff-3c31a803000849eed0e811268665c75c12ba307957800f2242bff775765998de>`_. ``portal_skins/plone_login`` is now gone, see `PLIP #2092 <https://github.com/plone/Products.CMFPlone/issues/2092>`_. The missing ``portal_skins/plone_login`` of course mean the `login_form_validate <https://github.com/plone/Products.CMFPlone/blob/8635459222bbf3bc5401edcc8ba19d8400eada0d/Products/CMFPlone/skins/plone_login/login_form_validate.vpy>`_ is gone too, as a reasult the login portlet produces an error.
 
 Possible solution to provide a layer based override for the login page.
 

@@ -55,6 +55,11 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.pluggablelogin-hiddenprofiles"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>
